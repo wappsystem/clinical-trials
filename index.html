@@ -42,7 +42,7 @@
         <!----------------------------------------------->
         <script>
             //------------------------------------
-            $vm={};$VmAPI={};$vm.ver=[3,2];
+            $vm={};$VmAPI={};$vm.ver=[5,2];
             $vm.start_time=new Date().getTime();
             $vm.api_path_development="https://cbs.wappsystem.com/dev/";
             $vm.api_path_production="https://cbs.wappsystem.com/pro/";
@@ -124,7 +124,7 @@
                 if(url!=undefined){
                     var urlR=url;
                     if($vm.localhost==true){
-                        urlR=urlR.replace('https://www.wappsystem.com.au/','http://127.0.0.1:8000/wappsystem/');
+                        urlR=urlR.replace('https://modules.wappsystem.com.au/','http://127.0.0.1:8000/wappsystem/modules/');
                         urlR=urlR.replace('https://www.vmiis.com/','http://127.0.0.1:8000/vmiis/your-company-business-portal/');
                     }
                 }
