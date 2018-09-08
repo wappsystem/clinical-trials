@@ -42,7 +42,7 @@
         <!----------------------------------------------->
         <script>
             //------------------------------------
-            $vm={};$VmAPI={};$vm.ver=[230,230];
+            $vm={};$VmAPI={};$vm.ver=[2,2];
             $vm.start_time=new Date().getTime();
             $vm.api_path_development="https://cbs.wappsystem.com/dev/";
             $vm.api_path_production="https://cbs.wappsystem.com/pro/";
@@ -169,8 +169,8 @@
             $vm.root_layout_content_slot='content'
             $vm.root_layout_footer='footer';
             //------------------------------------
-            var url1="https://www.wappsystem.com.au/modules/starter/app.html";          if($vm.localhost) url1="http://127.0.0.1:8000/vmiis/your-company-business-portal/modules/starter/app.html";
-            var url2="https://www.wappsystem.com.au/modules/menu/topbar-menu.html";     if($vm.localhost) url2="http://127.0.0.1:8000/vmiis/your-company-business-portal/modules/menu/topbar-menu.html";
+            var url1="https://www.vmiis.com/modules/starter/app.html"; if($vm.localhost) url1="http://127.0.0.1:8000/vmiis/your-company-business-portal/modules/starter/app.html";
+            var url2="https://www.vmiis.com/modules/menu/topbar-menu.html";     if($vm.localhost) url2="http://127.0.0.1:8000/vmiis/your-company-business-portal/modules/menu/topbar-menu.html";
             var urls=[url1,url2]; $vm.module_start_id=2;
             //---------------------------------------------
             $(urls).each(function(index,url){
