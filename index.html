@@ -52,10 +52,10 @@
             if(window.location.hostname=='127.0.0.1' || window.location.hostname=='localhost') $vm.localhost=true;
             //------------------------------------
             $vm.module_links=[
-                //"https://www.wappsystem.com.au/links/clinical-trials.json",
+                //"https://modules.wappsystem.com.au/links/clinical-trials.json",
             ];
             $vm.module_list={
-                "home": {"url":"https://www.vmiis.com/modules/home/home.html"},
+                "home": {"url":"https://modules.wappsystem.com.au/home/clinical-trial.html"},
 
                 "main":         {"url":"https://modules.wappsystem.com.au/clinical-trials/panels/main.html"},
           		"child":        {"url":"https://modules.wappsystem.com.au/clinical-trials/panels/child.html"},
@@ -125,7 +125,7 @@
                     var urlR=url;
                     if($vm.localhost==true){
                         urlR=urlR.replace('https://modules.wappsystem.com.au/','http://127.0.0.1:8000/wappsystem/modules/');
-                        urlR=urlR.replace('https://www.vmiis.com/','http://127.0.0.1:8000/vmiis/your-company-business-portal/');
+                        urlR=urlR.replace('https://wappsystem.com.au/','http://127.0.0.1:8000/wappsystem/');
                     }
                 }
                 return urlR;
@@ -169,8 +169,8 @@
             $vm.root_layout_content_slot='content'
             $vm.root_layout_footer='footer';
             //------------------------------------
-            var url1="https://www.vmiis.com/modules/starter/app.html"; if($vm.localhost) url1="http://127.0.0.1:8000/vmiis/your-company-business-portal/modules/starter/app.html";
-            var url2="https://www.vmiis.com/modules/menu/topbar-menu.html";     if($vm.localhost) url2="http://127.0.0.1:8000/vmiis/your-company-business-portal/modules/menu/topbar-menu.html";
+            var url1="https://modules.wappsystem.com.au/starter/app.html"; if($vm.localhost) url1="http://127.0.0.1:8000/wappsystem/modules/starter/app.html";
+            var url2="https://modules.wappsystem.com.au/menu/topbar-menu.html";     if($vm.localhost) url2="http://127.0.0.1:8000/wappsystem/modules/menu/topbar-menu.html";
             var urls=[url1,url2]; $vm.module_start_id=2;
             //---------------------------------------------
             $(urls).each(function(index,url){
