@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
-        <meta name="description" content="Clinical Trials">
+        <meta name="description" content="Research Electronic Data Capture application using single page application (SPA) framework. ">
         <link rel="icon" href="data:,">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css" />
         <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Nunito|Nunito+Sans|Roboto+Slab' />
@@ -20,12 +20,12 @@
             <!----------------------------------------------->
             <div id=c_header>
                 <div class=vm-mobile>
-                    <span id=vm-mobile_title class=vm-mobile-title>Wappsystem Research Booster</span>
+                    <span id=vm-mobile_title class=vm-mobile-title>Wappsystem Spardac</span>
                     <a id="vm-hamburger_button" class=vm-hamburger-button onclick="$vm.toggle()"><i class="fa fa-bars"></i></a>
                 </div>
                 <div class=vm-desk-logo>
                     <span id=vm-logo-label-A>Wappsystem</span><br>
-                    <span id=vm-logo-label-B>Research Booster</span>
+                    <span id=vm-logo-label-B>Spardac</span>
                 </div>
                 <div id="vm-menu">
                     <a href="?/home"><i class="fa fa-home"></i> Home</a>
@@ -153,7 +153,7 @@
             $('#vm-mobile_title').on('click',function(){ $vm.load_module_v2('home',$vm.root_layout_content_slot,{}) })
             $('.vm-desk-logo').on('click',function(){ $vm.load_module_v2('home',$vm.root_layout_content_slot,{}) })
             //------------------------------------
-            $vm.default_title="Clinical Trials";
+            $vm.default_title="Spardac Example";
             //------------------------------------
             $vm.show=function(id){
                 document.title=$vm.default_title;
