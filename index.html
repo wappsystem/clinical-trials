@@ -20,7 +20,7 @@
             <!----------------------------------------------->
             <div id=c_header>
                 <div class=vm-mobile>
-                    <span id=vm-mobile_title class=vm-mobile-title>Wappsystem SPARDAC</span>
+                    <span id=vm-mobile_title class=vm-mobile-title>Wappsystem</span>
                     <a id="vm-hamburger_button" class=vm-hamburger-button onclick="$vm.toggle()"><i class="fa fa-bars"></i></a>
                 </div>
                 <div class=vm-desk-logo>
@@ -53,11 +53,11 @@
             if(window.location.hostname=='127.0.0.1' || window.location.hostname=='localhost') $vm.localhost=true;
             //------------------------------------
             $vm.module_links=[
-                "https://clinical-trials.wappsystem.com.au/spardac.json",
+                "https://spardac.wappsystem.com.au/spardac.json",
             ];
             //------------------------------------
             $vm.module_list={
-                "home": {"url":"https://clinical-trials.wappsystem.com.au/home/spardac.html"},
+                "home": {"url":"https://spardac.wappsystem.com.au/home/spardac.html"},
                 "about":{"url":"https://www.vmiis.com/modules/about/about-this-website.html"}
             }
             //------------------------------------
@@ -67,7 +67,7 @@
                     if($vm.localhost==true){
                         urlR=urlR.replace('https://modules.wappsystem.com.au/','http://127.0.0.1:8000/wappsystem/modules/');
                         urlR=urlR.replace('https://wappsystem.com.au/','http://127.0.0.1:8000/wappsystem/');
-                        urlR=urlR.replace('https://clinical-trials.wappsystem.com.au/','http://127.0.0.1:8000/wappsystem/clinical-trials/');
+                        urlR=urlR.replace('https://spardac.wappsystem.com.au/','http://127.0.0.1:8000/wappsystem/spardac/');
                     }
                 }
                 return urlR;

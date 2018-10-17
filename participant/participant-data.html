@@ -15,8 +15,8 @@
             //-------------------------------------
 
             m.load=function(){
-                $vm.load_component('https://clinical-trials.wappsystem.com.au/components/help.html','section_help__ID');
-                $vm.load_component('https://clinical-trials.wappsystem.com.au/components/help-participant.html','section_help2__ID');
+                $vm.load_component('https://spardac.wappsystem.com.au/components/help.html','section_help__ID');
+                $vm.load_component('https://spardac.wappsystem.com.au/components/help-participant.html','section_help2__ID');
                 //$('#section_help__ID').hide().
                 $("#title__ID").text('Participant List');
             }
@@ -50,7 +50,7 @@
                         td.find('u').on('click',function(){
     						var d="";if($vm.server=='development') d="&database=development";
     						var p="?username="+records[I].S2+"&password="+records[I].S3+d;
-    						var q_url="https://www.wappsystem.com.au/clinical-trials-online-questionnaire/index.html"+p;
+    						var q_url="https://www.wappsystem.com.au/spardac-online-questionnaire/index.html"+p;
                             if(window.location.hostname=='127.0.0.1' || window.location.hostname=='localhost'){
     							q_url=q_url.replace("https://www.wappsystem.com.au/","http://127.0.0.1:8000/wappsystem/")
     						};
@@ -84,7 +84,7 @@
                 if(url!=undefined){
                     var urlR=url;
                     if($vm.localhost==true){
-                        urlR=urlR.replace('https://clinical-trials.wappsystem.com.au/','http://127.0.0.1:8000/wappsystem/clinical-trials/');
+                        urlR=urlR.replace('https://spardac.wappsystem.com.au/','http://127.0.0.1:8000/wappsystem/spardac/');
                     }
                 }
                 return urlR;
