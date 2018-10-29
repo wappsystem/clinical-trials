@@ -2,7 +2,7 @@
     <div>
         <div id=toolbar__ID class="navbar navbar-default">
         	<form class="form-inline">
-        		<button type=button id=count__ID class='btn btn-secondary'>Count</button>
+        		<button type=button id=count__ID class='btn btn-secondary'>Count</button> <a class="small font-italic text-muted"><br>Shows the number of records</a>
         	</form>
         	<span id=elapsed__ID style='float:right'></span>
         </div>
@@ -11,20 +11,24 @@
         		<span>Participants</span>
         		<ul>
         			<li title="Manage participant - Add new. Data entry for single participant. Setup questionnaires." module=participant-data >Participants</li>
+                    <p class="small font-italic text-muted">Manage participant<br>&bull; Add new participant <br>&bull; Data entry for single participant.<br>&bull; Setup active questionnaires</p>
         		</ul>
                 <span>Notes</span>
         		<ul>
-        			<li title="List of notes. Notes entry are done together with forms data entry." module=notes-data>All Task Notes</li>
-        		</ul>
-                <span>Unscheduled</span>
-                <ul>
-        			<li module=unschedule-concom-medication-data>Concomitant Medication</li>
-                    <li module=unschedule-adverse-event-data>Adverse Event</li>
+        			<li title="List of notes. Notes can be added to each data entry form." module=notes-data>All Task Notes</li>
+                    <p class="small font-italic text-muted">Notes can be added to<br> each data entry form</p>
         		</ul>
                 <span>Randomisation List</span>
                 <ul>
-        			<li module=randomisation-list-data>Randomisation</li>
+        			<li title="We can accomodate any type of randomisation.">Randomisation</li>
+                    <p class="small font-italic text-muted">We can accomodate<br> any type of randomisation</p>
         		</ul>
+                <span>Unscheduled</span>
+                <ul>
+                    <li module=unschedule-concom-medication-data>Concomitant Medication</li>
+                    <li module=unschedule-adverse-event-data>Adverse Event</li>
+                    <p class="small font-italic text-muted">eCRF for entries not<br> connected to any visits.</p>
+                </ul>
         		<br>
         	</div>
         	VmInclude:__CURRENT_PATH__/task_links.html
@@ -133,6 +137,7 @@
     <style>
     	VmInclude:__COMPONENT__/navigation/navigation.css
         #toolbar__ID{
+            font-family: 'Roboto Slab';
     		background-color:#ccc;
     		margin-bottom:0px;
     		overflow:hidden;
@@ -156,6 +161,7 @@
     		animation: vm_module_fadein 1.0s;
     	}
     	#panel__ID{
+            font-family: 'Roboto Slab';
     		padding:20px 0 0 20px;
     	}
     	#D__ID li {
