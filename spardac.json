@@ -3,7 +3,7 @@
 	{
     	"main":         {"url":"https://spardac.wappsystem.com.au/panels/main.html"},
   		"child":        {"url":"https://spardac.wappsystem.com.au/panels/child.html"},
-		"quest-panel":  {"url":"https://modules.wappsystem.com.au/clinical-trials/online-questionnaire/quest.html","prefix":"xxxxx"},
+		"quest-panel":  {"url":"https://modules.wappsystem.com.au/clinical-trials/online-questionnaire/questxxx.html","prefix":"xxxxx"},
 
 		"participant-data":     	{"table_id":"20005031",     "url":"https://spardac.wappsystem.com.au/participant/participant-data.html", 	"form_module":"participant-form"},
 		"participant-form":     	{"table_id":"20005031",     "url":"https://spardac.wappsystem.com.au/participant/participant-form.html"},
