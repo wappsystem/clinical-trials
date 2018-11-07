@@ -36,7 +36,7 @@
 					<select class=form-control name=Gender>
 						<option value=''>---</option>
 						<option>Male</option>
-						<option>Femaile</option>
+						<option>Female</option>
 					</select>
 				</div>
 				<div class="col-sm col-lg-6">
@@ -69,6 +69,14 @@
 				$('#row_participant__ID').show()
 				$('#record__ID').val(m.input.record.UID)
 			}
+		}
+		//-------------------------------------
+		m.before_submit=function(record,dbv){
+			var part_field=$vm.module_list[m.prefix+'participant-fields'].fields;
+			dbv.S1=record[part_field.field1];
+			dbv.S2=record[part_field.field2];
+			dbv.S3=record[part_field.field3];
+			return true;
 		}
 		//-------------------------------------
 	}
