@@ -54,15 +54,15 @@
 
         "quest_list":{
             "list":{
-                "Screening":[
+                "Screening (Click the checkbox on this line to enable/disable all questionnaires in this visit)":[
 					{"table_id":"1810300420","task_name":"Screening - One of many choice -Standard"},
                     {"table_id":"1810302356","task_name":"Screening - One of many choice - Special type 1"},
                     {"table_id":"1810301410","task_name":"Screening - One of many choice - Special type 2"}
     			],
-				"Baseline":[
+				"Baseline (Click the checkbox on this line to enable/disable all questionnaires in this visit)":[
                     {"table_id":"1810300719","task_name":"Baseline - Many of many choices - Standard"}
     			],
-				"Visit 1":[
+				"Visit 1 (Click the checkbox on this line to enable/disable all questionnaires in this visit)":[
                     {"table_id":"1810300720","task_name":"Visit 1 - Visual analogue scale"},
 					{"table_id":"1810300721","task_name":"Visit 1 - Digital scale"},
                     {"table_id":"1810301409","task_name":"Visit 1 - Star rating"}
