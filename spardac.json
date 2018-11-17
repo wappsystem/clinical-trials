@@ -19,6 +19,8 @@
 
 		"s-upload-files-data":	 	{"table_id":"181030356",		"url":"https://modules.wappsystem.com.au/clinical-trials/tasks/upload-files-data.html",	"form_module":"s-upload-files-form"},
 		"s-upload-files-form":	 	{"table_id":"181030356",		"url":"https://modules.wappsystem.com.au/clinical-trials/tasks/upload-files-form.html"},
+		"s-read-data-from-file-data":	 	{"table_id":"1811090421",		"url":"https://modules.wappsystem.com.au/clinical-trials/tasks/read-data-from-file-data.html",	"form_module":"s-read-data-from-file-form"},
+		"s-read-data-from-file-form":	 	{"table_id":"1811090421",		"url":"https://modules.wappsystem.com.au/clinical-trials/tasks/read-data-from-file-form.html"},
 		"s-dynamic-text-form-data":	 	{"table_id":"1810300421",		"url":"https://modules.wappsystem.com.au/clinical-trials/tasks/dynamic-text-form-data.html",	"form_module":"s-dynamic-text-form-form"},
 		"s-dynamic-text-form-form":	 	{"table_id":"1810300421",		"url":"https://modules.wappsystem.com.au/clinical-trials/tasks/dynamic-text-form-form.html"},
 
