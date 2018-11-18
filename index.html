@@ -43,7 +43,7 @@
         <!----------------------------------------------->
         <script>
             //------------------------------------
-            $vm={};$VmAPI={};$vm.ver=[12,9];
+            $vm={};$VmAPI={};$vm.ver=[13,10];
             $vm.start_time=new Date().getTime();
             $vm.api_path_development="https://cbs.wappsystem.com/dev/";
             $vm.api_path_production="https://cbs.wappsystem.com/pro/";
@@ -95,7 +95,8 @@
             $('.vm-desk-logo').on('click',function(){ $vm.load_module_v2('home',$vm.root_layout_content_slot,{}) })
             //------------------------------------
             $vm.default_title="SPARDAC Example";
-            $('#text_0').html("SPARDAC Powered by Wappsystem");
+            var txt=" - Wappsystem Pty Ltd - SPARDAC";
+            $('#text_0').html("Copyright &copy; "+(new Date()).getFullYear()+txt);
             //------------------------------------
             $vm.show=function(id){
                 document.title=$vm.default_title;
