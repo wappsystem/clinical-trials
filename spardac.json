@@ -1,17 +1,12 @@
 {
 	"modules":
 	{
-    	"main":         {"url":"https://astn.wappsystem.com.au/panels/main.html"},
-    	"main-sql":         {"url":"https://astn.wappsystem.com.au/panels/main-sql.html"},
-  		"child":        {"url":"https://astn.wappsystem.com.au/panels/child.html"},
+    	"main":         {"url":"https://spardac.wappsystem.com.au/panels/main.html"},
+  		"child":        {"url":"https://spardac.wappsystem.com.au/panels/child.html"},
 		"quest-panel":  {"url":"https://modules.wappsystem.com.au/clinical-trials/online-questionnaire/quest.html"},
 
-		"project-data":     	{"table_id":"20003481",     "url":"https://astn.wappsystem.com.au/participant/project-data.html", 	"form_module":"project-form"},
-		"project-form":     	{"table_id":"20003481",     "url":"https://astn.wappsystem.com.au/participant/project-form.html"},
-		"site-data":	  		{"table_id":"20003485",		"url":"https://astn.wappsystem.com.au/participant/site-data.html",		"form_module":"site-form"},
-		"site-form":	  		{"table_id":"20003485",		"url":"https://astn.wappsystem.com.au/participant/site-form.html"},
-		"participant-data":     	{"table_id":"20005031",     "url":"https://astn.wappsystem.com.au/participant/participant-data.html", 	"form_module":"participant-form"},
-		"participant-form":     	{"table_id":"20005031",     "url":"https://astn.wappsystem.com.au/participant/participant-form.html"},
+		"participant-data":     	{"table_id":"20005031",     "url":"https://spardac.wappsystem.com.au/participant/participant-data.html", 	"form_module":"participant-form"},
+		"participant-form":     	{"table_id":"20005031",     "url":"https://spardac.wappsystem.com.au/participant/participant-form.html"},
 		"participant-fields":		{"fields":{"field1":"Subject_ID","field2":"Subject_Initials","field3":""}},
 		"notes-data":	  		{"table_id":"20005033",		"url":"https://modules.wappsystem.com.au/clinical-trials/participant-and-others/notes-data.html",		"form_module":"notes-form"},
 		"notes-form":	  		{"table_id":"20005033",		"url":"https://modules.wappsystem.com.au/clinical-trials/participant-and-others/notes-form.html"},

@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
-        <meta name="description" content="Australasian Sleep Trials Network">
+        <meta name="description" content="Research Electronic Data Capture application using single page application (SPA) framework. ">
         <link rel="icon" href="data:,">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css" />
         <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Nunito|Nunito+Sans|Roboto+Slab' />
@@ -20,23 +20,16 @@
             <!----------------------------------------------->
             <div id=c_header>
                 <div class=vm-mobile>
-                    <div class=vm-mobile-logo>
-                        <div id=vm_logo module=home>
-                            <div id=vm_logo_small_image></div>
-                        </div>
-                    </div>
+                    <span id=vm-mobile_title class=vm-mobile-title>Wappsystem</span>
                     <a id="vm-hamburger_button" class=vm-hamburger-button onclick="$vm.toggle()"><i class="fa fa-bars"></i></a>
                 </div>
                 <div class=vm-desk-logo>
-                    <div id=vm_logo module=home>
-                        <div id=vm_logo_image></div>
-                    </div>
+                    <span id=vm-logo-label-A>Wappsystem</span><br>
+                    <span id=vm-logo-label-B>SPARDAC</span>
                 </div>
                 <div id="vm-menu">
                     <a href="?/home"><i class="fa fa-home"></i> Home</a>
-                    <a href="?/main-sql"><i class="fa fa-bars"></i> Sleep Health Questionnaire</a>
-                    <a href="?/aused"><i class="fa fa-bars"></i> AusEd Driving Simulator</a>
-                    <a href="?/neuro"><i class="fa fa-bars"></i> Neurocognitive Test Battery</a>
+                    <a href="?/main"><i class="fa fa-bars"></i> Study Dashboard</a>
                     <a id=vm_signin onclick="$vm.nav_wappsystem_signin();"><i class="fa fa-user"></i> Sign In</a>
                     <a id=vm_signout class=vm-hide onclick=$vm.nav_signout()><i class="fa fa-user"></i> Sign Out</a>
                 </div>
@@ -60,11 +53,11 @@
             if(window.location.hostname=='127.0.0.1' || window.location.hostname=='localhost') $vm.localhost=true;
             //------------------------------------
             $vm.module_links=[
-                "https://astn.wappsystem.com.au/astn.json",
+                "https://spardac.wappsystem.com.au/spardac.json",
             ];
             //------------------------------------
             $vm.module_list={
-                "home": {"url":"https://astn.wappsystem.com.au/home/astn.html"},
+                "home": {"url":"https://spardac.wappsystem.com.au/home/spardac.html"},
                 "about":{"url":"https://www.vmiis.com/modules/about/about-this-website.html"}
             }
             //------------------------------------
@@ -74,7 +67,7 @@
                     if($vm.localhost==true){
                         urlR=urlR.replace('https://modules.wappsystem.com.au/','http://127.0.0.1:8000/wappsystem/modules/');
                         urlR=urlR.replace('https://wappsystem.com.au/','http://127.0.0.1:8000/wappsystem/');
-                        urlR=urlR.replace('https://astn.wappsystem.com.au/','http://127.0.0.1:8000/wappsystem/astn/');
+                        urlR=urlR.replace('https://spardac.wappsystem.com.au/','http://127.0.0.1:8000/wappsystem/spardac/');
                     }
                 }
                 return urlR;
@@ -101,8 +94,8 @@
             $('#vm-mobile_title').on('click',function(){ $vm.load_module_v2('home',$vm.root_layout_content_slot,{}) })
             $('.vm-desk-logo').on('click',function(){ $vm.load_module_v2('home',$vm.root_layout_content_slot,{}) })
             //------------------------------------
-            $vm.default_title="ASTN Website";
-            var txt=" - Australasian Sleep Trials Network The ASTN is funded by an NHMRC Enabling Grant";
+            $vm.default_title="SPARDAC Example";
+            var txt=" - Wappsystem Pty Ltd - SPARDAC";
             $('#text_0').html("Copyright &copy; "+(new Date()).getFullYear()+txt);
             //------------------------------------
             $vm.show=function(id){
@@ -146,7 +139,7 @@
         <!----------------------------------------------->
         <style>
             :root {
-                --menu-color: #000;
+                --menu-color: #fff;
                 --menu-hover-color: #29eca6;
                 --menu-hover-background-color: #555;
 
@@ -161,7 +154,7 @@
                 --mobile-menu-background-color:#1c3144;
                 --mobile-break-point:700px;
             }
-            html,body{ margin:0; padding:0; height:100%; font-family:'Roboto Slab';}
+            html,body{ margin:0; padding:0; height:100%; font-family:Arial;}
             body{background-size: cover; background-repeat: repeat-x; background-position: center top; background-attachment: fixed;}
             .body_background_default{
                 background-image: url(https://image.vmiis.com/bk031.jpg);
@@ -189,20 +182,6 @@
                 line-height:80%;
                 display:inline-block;
             }
-            #vm_logo_image{
-                width:200px;
-                height:70px;
-                background: url('components/astn_logo_trans.png') no-repeat top center;
-                background-size: cover;
-                float:left;
-            }
-            #vm_logo_small_image{
-                width:100px;
-                height:35px;
-                background: url('components/astn_logo_small_trans.png') no-repeat top center;
-                background-size: cover;
-                float:left;
-            }
             #footer{
                 height:24px;
                 color: #fff;
@@ -212,9 +191,8 @@
                 text-align: center;
             }
             /*----------------------*/
-            .vm-header{height:100px;background:rgba(255,255,255,0.8);}
-            .vm-desk-logo{ display:inline-block;float:left;padding:10px 30px 0 30px;cursor:pointer;}
-            .vm-mobile-logo{ display:inline-block;float:left;padding:2px 0 0 10px;cursor:pointer;}
+            .vm-header{height:100px;background:rgba(0,0,0,0.6);}
+            .vm-desk-logo{ display:inline-block;float:left;padding:36px 30px 0 30px;cursor:pointer;}
             #vm-menu{ float:left;padding:50px 30px 0 30px;}
             @media screen and (max-width: 900px){
                 .vm-header{height:50px;}

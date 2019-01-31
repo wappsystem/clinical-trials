@@ -7,12 +7,12 @@
 	<script>
 		function F__ID(){
 			$('#D__ID').on('load',function(){
-				//$('#section_1__ID').css('height',($('body').height()-$('#header').outerHeight())+'px');
+				$('#section_1__ID').css('height',($('body').height()-$('#header').outerHeight())+'px');
 			})
-//            $vm.load_component('https://astn.wappsystem.com.au/components/astn-page1.html','section_1__ID');
-//            $vm.load_component('https://astn.wappsystem.com.au/components/astn-page2.html','section_2__ID');
-            $vm.load_component('http://127.0.0.1:8000/wappsystem/astn/components/astn-page1.html','section_1__ID');
-//            $vm.load_component('http://127.0.0.1:8000/wappsystem/astn/components/astn-page2.html','section_2__ID');
+            $vm.load_component('https://spardac.wappsystem.com.au/components/spardac-page1-text.html','section_1__ID');
+            $vm.load_component('https://spardac.wappsystem.com.au/components/spardac-page2.html','section_2__ID');
+//            $vm.load_component('http://127.0.0.1:8000/wappsystem/spardac/components/spardac-page1-text.html','section_1__ID');
+//            $vm.load_component('http://127.0.0.1:8000/wappsystem/spardac/components/spardac-page2.html','section_2__ID');
             //$vm.load_component('http://127.0.0.1:8000/wappsystem/components/clinical-002/c.html','section_3__ID');
 		}
         $vm.load_component=function(url,div){
