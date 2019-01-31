@@ -1,0 +1,61 @@
+<div id=D__ID>
+    <div>
+        VmInclude:__CURRENT_PATH__/../../components/grid.v1h.html
+    </div>
+    <script>
+        function F__ID(){
+            //-------------------------------------
+            VmInclude:__COMPONENT__/module/grid.v1.js
+            //-------------------------------------
+            var fields="Login Name|LoginName,Site List|SiteList";
+            m.fields="_Form,"+fields+",Submit Date|DateTime,Submitted by|Author,_Delete";
+            m.form_fields=fields;
+            //-------------------------------------
+            var site_tid=$vm.module_list[m.prefix+'site-data'].table_id;
+            //-------------------------------------
+
+            m.load=function(){
+                $vm.load_component('https://modules.wappsystem.com.au/clinical-trials/components/help.html','section_help__ID');
+                $("#title__ID").text('SHQ Site List');
+            }
+           //-------------------------------------
+           m.cell_render=function(records,I,field,td,set_value,source){
+                switch(field){
+                    case 'SiteList':
+                        records[I].vm_readonly[field]=true;
+                        records[I][field]=records[I][field].replace(/\n/g,'\r').replace(/\r/g,' ');
+                        td.html(records[I][field]);
+                        break;
+                    case 'LoginName':
+                        records[I].vm_readonly[field]=true;
+                        break;
+                }
+            }
+           //-------------------------------------
+            $vm.local_url=function(url){
+                if(url!=undefined){
+                    var urlR=url;
+                    if($vm.localhost==true){
+                        urlR=urlR.replace('https://astn.wappsystem.com.au/','http://127.0.0.1:8000/wappsystem/astn/');
+                    }
+                }
+                return urlR;
+            }
+            //-------------------------------------
+            m.before_submit_2=function(record,dbv){
+                dbv.S2=record.LoginName;
+                return true;
+            }
+            //-------------------------------------
+        }
+    </script>
+    <style>
+        VmInclude:__COMPONENT__/module/grid.v1.css
+        #D__ID{
+            height:100%;
+            overflow:auto;
+            animation: vm_module_fadein 1.0s;
+            background-color: #fff;
+        }
+    </style>
+</div>
